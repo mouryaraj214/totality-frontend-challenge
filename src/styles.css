@@ -1,0 +1,148 @@
+/* src/styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  height: 55px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+
+}
+
+.navbar li {
+  margin: 0 15px;
+  margin-right: 55px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Reduced space */
+}
+.filters h2{
+  text-align: start;
+  color: #333;
+ }
+.filters {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  
+}
+
+.filter-sec {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 20px;
+  width: 100%;
+  height: 32px;
+}
+
+.filter-sec input {
+  margin-right: 35px;
+  margin-left: 20px;
+  border: 2px solid rgba(174, 173, 173, 0.61);
+  padding-left: 5px;
+  border-radius: 10px;
+}
+
+.property-list {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0; /* Remove any bottom margin */
+}
+
+.property-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
+  flex: 0 1 calc(33.333% - 20px); /* Responsive cards */
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+}
+
+.booking-cart {
+  width: 300px; /* Fixed width for the booking cart */
+  margin-left: 10px; /* Minimal space between property list and booking cart */
+  margin-top: 0; /* Ensure there's no gap on top */
+   /* Keeps the cart visible during scroll */
+  top: 20px; /* Slight offset for sticky effect */
+}
+
+.checkout {
+  margin-top: 20px;
+}
+
+.checkout input {
+  display: block;
+  margin: 10px 0; /* Space between inputs */
+  padding: 10px;
+  width: 100%; /* Full width inputs */
+  border: 2px solid rgba(174, 173, 173, 0.61);
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #28a745; /* Green background for buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.about, .contact {
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .booking-cart {
+    margin-left: 0;
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .property-card {
+    flex: 0 1 calc(50% - 20px); /* Two cards per row on smaller screens */
+  }
+}
